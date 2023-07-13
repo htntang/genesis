@@ -1,0 +1,11 @@
+.footer{
+    margin-top:100px;
+    margin-bottom:20px;
+    align-items: center;
+}
+
+img.footer-logo{
+    float:right;
+    width:180px;
+    margin:0 auto;
+}
