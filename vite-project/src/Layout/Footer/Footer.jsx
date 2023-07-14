@@ -5,6 +5,12 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import { 
+    BsSpotify,
+    BsLinkedin,
+    BsInstagram,
+    BsTiktok
+    } from 'react-icons/bs';
 
 function Footer(props) {
     const { description, title } = props;
@@ -14,7 +20,7 @@ function Footer(props) {
 
             <div className="row">
                 <div className="column">
-                    <Link to="/">Link1</Link>
+                    <Link to="/Contact">Contact</Link>
                     <br />
                     <Link to="/">Link2</Link>
                     <br />
@@ -24,7 +30,38 @@ function Footer(props) {
                 </div>
 
                 <div className="column">
-                    social media icons
+                <div className="socialmedia_icons">
+                        <BsLinkedin 
+                            size={30}
+                            color="var(--dark-green)"
+                            onMouseOver={({target})=>target.style.color="#eee"}
+                            onMouseOut={({target})=>target.style.color="var(--dark-green)"}
+                        />
+
+                        <BsInstagram
+                            size={30}
+                            style={{ marginTop: 10 }}
+                            color="var(--dark-green)"
+                            onMouseOver={({target})=>target.style.color="#eee"}
+                            onMouseOut={({target})=>target.style.color="var(--dark-green)"}
+                        />
+
+                        <BsTiktok
+                            size={30}
+                            style={{ marginTop: 10 }}
+                            color="var(--dark-green)"
+                            onMouseOver={({target})=>target.style.color="#eee"}
+                            onMouseOut={({target})=>target.style.color="var(--dark-green)"}
+                        /> 
+
+                        <BsSpotify
+                            size={30}
+                            style={{ marginTop: 10 }}
+                            color="var(--dark-green)"
+                            onMouseOver={({target})=>target.style.color="#eee"}
+                            onMouseOut={({target})=>target.style.color="var(--dark-green)"}
+                        />
+                    </div>
                 </div>
 
                 <div className="column">
@@ -37,6 +74,7 @@ function Footer(props) {
             <Box component="footer">
                 <Container maxWidth="lg">
                     <Typography 
+                        marginTop="50px"
                         variant="h6" 
                         align="center" 
                         gutterBottom>

@@ -1,5 +1,8 @@
 .statistics{
+    height:fit-content;
+    margin-bottom:100px;
     align-items: center;
+    width:100%;
 }
 
 h1.stats{
@@ -10,8 +13,7 @@ h1.stats{
     border-radius:12px;
     background-color: #eee;
     padding:10px;
-    margin:20px;
-    /* width:fit-content; */
+    margin:100px;
     height:fit-content;
 }
 

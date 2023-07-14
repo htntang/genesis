@@ -56,7 +56,6 @@
 }
 
 *{
-  background-color:var(--green-striveopp);
   color:var(--green-dark-striveopp);
   width: 100%;
   margin: 0 auto;
@@ -65,8 +64,8 @@
 }
 
 .App{
-  padding:0.5rem 3.5rem;
   overflow:hidden;
+  background-color:var(--green-striveopp);
 }
 
 .column{
@@ -78,7 +77,7 @@
 }
 
 h1{
-  font-family:'Chicle', sans-serif;
+  font-family:'Oswald', sans-serif;
   margin-top:50px;
   margin-bottom:50px;
 }

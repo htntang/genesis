@@ -13,8 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import "./NavigationBar.css";
+import { Link } from 'react-router-dom';
 
-const pages = ['Scholarship Database', 'Coaching', 'Blog', 'About', 'Meet the Team'];
+const pages = ['Scholarships', 'Coaching', 'Blog', 'About', 'Team'];
 const settings = ['Profile', 'Account', 'Dashboard'];
 
 function ResponsiveAppBar() {
@@ -42,7 +43,7 @@ function ResponsiveAppBar() {
             <AppBar 
                 position="static"
                 sx={{
-                    bgcolor:"#294243"
+                    bgcolor:"#eee"
                     }}>
 
                 <Container 
@@ -69,7 +70,7 @@ function ResponsiveAppBar() {
                                 fontFamily: 'Chicle',
                                 fontWeight: 700,
                                 letterSpacing: '.3rem',
-                                color: '#eee',
+                                color: '#294243',
                                 textDecoration: 'none',
                                 m:5
                             }}>
@@ -83,7 +84,7 @@ function ResponsiveAppBar() {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="#eee">
+                            color="#294243">
 
                                 <MenuIcon />
 
@@ -104,20 +105,20 @@ function ResponsiveAppBar() {
                                 open={Boolean(anchorElNav)}
                                 onClose={handleCloseNavMenu}
                                 sx={{
-                                    display: { xs: 'block', md: 'none', color: '#eee' },
+                                    display: { xs: 'block', md: 'none', color: '#294243' },
                                 }}
                                 >
                                     {pages.map((page) => (
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center" color="#eee">
-                                                {page}
+                                            <Typography textAlign="center" color="#294243" fontSize="40px">
+                                                <Link style={{textDecoration:"none", color:"#294243"}} to = {`/${page}`}>
+                                                    {page}
+                                                </Link>
                                             </Typography>
                                         </MenuItem>
                                     ))}   
                             </Menu>
                         </Box>
-
-                        <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 
                         <Typography
                             variant="h5"
@@ -131,7 +132,7 @@ function ResponsiveAppBar() {
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: '#eee',
+                            color: '#294243',
                             textDecoration: 'none',
                             }}>
                                 <img
@@ -149,9 +150,10 @@ function ResponsiveAppBar() {
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: '#eee', display: 'block' }}
-                            >
-                                {page}
+                                sx={{ my: 2, color: '#294243', display: 'block' }}>
+
+                                <Link style={{textDecoration:"none", color:"#294243"}} to={`/${page}`}>{page}</Link>
+
                             </Button>
                             ))}
                         </Box>
@@ -166,7 +168,7 @@ function ResponsiveAppBar() {
                             </Tooltip>
 
                             <Menu
-                                sx={{ mt: '45px', color: '#eee' }}
+                                sx={{ mt: '45px', color: '#294243' }}
                                 id="menu-appbar"
                                 anchorEl={anchorElUser}
                                 anchorOrigin={{
@@ -183,12 +185,11 @@ function ResponsiveAppBar() {
                                 >
                                 {settings.map((setting) => (
                                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center" color="#294243">{setting}</Typography>
+                                    <Typography textAlign="center" color="#294243" >{setting}</Typography>
                                     </MenuItem>
                                 ))}
                             </Menu>
                         </Box>
-                        
                     </Toolbar>
                 </Container>
             </AppBar>
